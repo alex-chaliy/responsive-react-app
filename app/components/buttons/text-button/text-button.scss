@@ -1,0 +1,9 @@
+@import '../../../scss/helpers/button-base.scss';
+@import '../../../scss/helpers/button-glass-effect.scss';
+
+@import '../../../scss/variables/colors.scss';
+
+.text-button {
+  @extend .button-base, .button-glass-effect;
+  color: $white;
+}

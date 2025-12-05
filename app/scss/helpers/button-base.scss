@@ -1,0 +1,20 @@
+@import '../variables/colors.scss';
+@import '../variables/constants.scss';
+
+.button-base {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $button-height;
+  border-radius:$button-height;
+  padding: 4px 12px;
+  color: $black;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

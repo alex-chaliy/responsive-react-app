@@ -1,0 +1,65 @@
+@import '../../scss/variables/colors.scss';
+@import '../../scss/helpers/pseudo-el-base.scss';
+
+$header-height: 48px;
+
+.header-layout {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 16px 22px;
+  width: 100%;
+
+  .header {
+    position: relative;
+    background-color: $header-bg;
+    backdrop-filter: blur(5px);
+    box-shadow: 6px 5px 12px 1px rgba(#000, 0.3);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $header-height;
+    width: 100%;
+    border-radius: $header-height;
+    padding: 8px;
+
+    &:before {
+      @include pseudo-el-base;
+      box-shadow: inset 3px 4px 2px -3px rgba(#fff, 0.7);
+      border-radius: $header-height;
+    }
+
+    &:after {
+      @include pseudo-el-base;
+      border-radius: $header-height;
+      box-shadow: inset -3px -4px 3px -3px rgba(#000, 0.7);
+    }
+  }
+
+  .header-logo {
+    margin-left: 15px;
+    margin-top: 5px;
+  }
+
+  .logo-wrap,
+  .nav-wrap {
+    position: relative;
+    z-index: 2;
+  }
+
+  .nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-menu-button {
+    margin-left: 8px;
+  }
+
+  .header-theme-switcher {
+    margin-right: 8px;
+  }
+}

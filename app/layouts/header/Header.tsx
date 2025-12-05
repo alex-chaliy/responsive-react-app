@@ -1,0 +1,22 @@
+import './header.scss';
+import TextButton from '../../components/buttons/text-button/TextButton';
+import BurgerMenuButton from '../../components/buttons/burger-menu-button/BurgerMenuButton';
+import ThemeSwitcher from '../../components/theme-switcher/ThemeSwitcher';
+import Logo from '../../components/logo/Logo';
+
+export default function Header() {
+  return (
+    <div className="header-layout">
+      <header className="header">
+        <div className="logo-wrap">
+          <Logo className="header-logo" />
+        </div>
+        <div className="nav-wrap">
+          <ThemeSwitcher className="header-theme-switcher" />
+          <TextButton title={'Sign in'} />
+          <BurgerMenuButton className="header-menu-button" />
+        </div>
+      </header>
+    </div>
+  );
+}

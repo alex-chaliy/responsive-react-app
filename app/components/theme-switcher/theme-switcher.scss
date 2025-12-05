@@ -1,0 +1,72 @@
+@import '../../scss/helpers/pseudo-el-base.scss';
+@import '../../scss/helpers/button-base.scss';
+@import '../../scss/helpers/button-pressed-glass-effect.scss';
+
+@import '../../scss/variables/constants.scss';
+
+$switch-width: 48px;
+$switch-height: 24px;
+
+$sunny-moon-el-width: 20px;
+$sunny-moon-el-margin: 2px;
+
+.theme-switcher {
+  @extend .button-base, .button-pressed-glass-effect;
+  width: $switch-width;
+  min-width: $switch-width;
+  height: $switch-height;
+  position: relative;
+
+  .checkbox {
+    display: none;
+  }
+
+  .sunny-moon-element {
+    transition: left 0.15s ease-in;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: $sunny-moon-el-width;
+    height: $sunny-moon-el-width;
+    background-color: rgba(#000, 0.07);
+    box-shadow: 0 1.5px 3px 0.6px rgba(#000, 0.7);
+
+    // blick
+    &:before {
+      @include pseudo-el-base;
+      border-radius: 100%;
+      box-shadow: inset 0 1.5px 1px -0.6px rgba(#fff, 0.6);
+    }
+
+    // inverse blick
+    &:after {
+      @include pseudo-el-base;
+      border-radius: 100%;
+      box-shadow: inset 0 -1.5px 1px -0.5px rgba(#000, 0.7);
+    }
+  }
+
+  .sunny-moon-image {
+    transition: top 0.2s ease-in;
+    position: relative;
+    left: 4px;
+    top: -16px;
+  }
+
+  &.theme-night {
+    .sunny-moon-element {
+      left: $switch-width - $sunny-moon-el-width - $sunny-moon-el-margin;
+    }
+    .sunny-moon-image {
+      top: 4px;
+    }
+  }
+
+  .img-wrap {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../../scss/variables/colors.scss';
+
+.main-heading {
+  color: $blue;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 124%;
+  letter-spacing: 0.25px;
+  text-align: center;
+}

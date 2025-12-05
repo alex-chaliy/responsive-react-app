@@ -1,0 +1,53 @@
+@import './pseudo-el-base.scss';
+@import '../variables/constants.scss';
+
+@import '../variables/colors.scss';
+
+.button-glass-effect {
+  position: relative;
+  background-color: rgba(#000, 0.05);
+  box-shadow: 1px 1px 2px -1px rgba(#000, 0.15);
+
+  &:before {
+    @include pseudo-el-base;
+    border-radius: $button-height;
+    box-shadow: inset 3px 4px 2px -4px rgba(#fff, 0.6);
+  }
+
+  &:after {
+    @include pseudo-el-base;
+    border-radius: $button-height;
+    box-shadow: inset -3px -4px 2px -4px rgba(#fff, 0.6);
+  }
+
+  .more-pseudo:before {
+    @include pseudo-el-base;
+    border-radius: $button-height;
+    box-shadow: inset 1px 1px 6px 1px rgba(#000, 0.25);
+  }
+
+  // button states
+  transition: color 0.5s;
+  &:before,
+  &:after,
+  .more-pseudo:before {
+    transition: box-shadow 0.5s;
+  }
+
+  &:hover {
+    color: $cyan;
+  }
+
+  &:hover,
+  &:active {
+    &:before {
+      box-shadow: inset 2.1px 3.1px 1.5px -2.1px rgba(#fff, 0.3);
+    }
+    &:after {
+      box-shadow: inset -2.5px -3.5px 1px -3px rgba(#fff, 0.5);
+    }
+    .more-pseudo:before {
+      box-shadow: inset 1px 1px 6px 2px rgba(#000, 0.3);
+    }
+  }
+}
