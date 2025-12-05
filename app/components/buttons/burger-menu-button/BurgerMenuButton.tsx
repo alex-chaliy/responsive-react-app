@@ -7,7 +7,10 @@ export default function BurgerMenuButton(props: any) {
   const classNames = cn('burger-menu-button', className);
   return (
     <button className={classNames}>
-      <span className="more-pseudo"></span>
+      <span className="hover-layout">
+        <span className="hl-more-pseudo" />
+      </span>
+      <span className="more-pseudo" />
       <BurgerMenuIcon className="menu-image" />
     </button>
   );

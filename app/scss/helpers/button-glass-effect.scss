@@ -8,46 +8,89 @@
   background-color: rgba(#000, 0.05);
   box-shadow: 1px 1px 2px -1px rgba(#000, 0.15);
 
+  // blick - on left top
   &:before {
     @include pseudo-el-base;
     border-radius: $button-height;
     box-shadow: inset 3px 4px 2px -4px rgba(#fff, 0.6);
   }
 
+  // blick - on bottom right
   &:after {
     @include pseudo-el-base;
     border-radius: $button-height;
     box-shadow: inset -3px -4px 2px -4px rgba(#fff, 0.6);
   }
 
+  // a small inner shadow
   .more-pseudo:before {
     @include pseudo-el-base;
     border-radius: $button-height;
     box-shadow: inset 1px 1px 6px 1px rgba(#000, 0.25);
   }
 
+  // set up containers for additional pseudo elements
+  .more-pseudo,
+  .hover-layout,
+  .hl-more-pseudo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: $button-height;
+    z-index: 0;
+  }
+
   // button states
   transition: color 0.5s;
   &:before,
   &:after,
-  .more-pseudo:before {
-    transition: box-shadow 0.5s;
+  .more-pseudo:before,
+  .hover-layout {
+    transition: opacity 0.4s;
+  }
+
+  .hover-layout {
+    opacity: 0;
+
+    &:before,
+    &:after,
+    .hl-more-pseudo:before {
+      @include pseudo-el-base;
+      border-radius: $button-height;
+    }
+
+    // blick - top left
+    &:before {
+      box-shadow: inset 2.1px 3.1px 1.5px -2.1px rgba(#fff, 0.25);
+      z-index: 1;
+    }
+    // blick bottom right
+    &:after {
+      box-shadow: inset -2.5px -3.5px 1px -3px rgba(#fff, 0.45);
+      z-index: 1;
+    }
+    // inner shadow
+    .hl-more-pseudo:before {
+      box-shadow: inset -1px 1px 5px 3px rgba(#000, 0.25);
+    }
+    .hl-more-pseudo {
+      background-color: rgba(#000, 0.01);
+    }
   }
 
   &:hover {
     color: $cyan;
-  }
-
-  &:hover,
-  &:active {
-    &:before {
-      box-shadow: inset 2.1px 3.1px 1.5px -2.1px rgba(#fff, 0.3);
-    }
-    &:after {
-      box-shadow: inset -2.5px -3.5px 1px -3px rgba(#fff, 0.5);
-    }
+    &:before,
+    &:after,
     .more-pseudo:before {
-      box-shadow: inset 1px 1px 6px 2px rgba(#000, 0.3);
+      opacity: 0;
+    }
+
+    .hover-layout {
+      opacity: 1;
     }
   }
 }
