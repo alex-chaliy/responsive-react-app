@@ -26,7 +26,7 @@ export default function ThemeSwitcher(props: ThemeSwitcherProps) {
         name="theme-switch-checkbox"
         checked={cbChecked}
         onChange={() => {
-          handleChackboxChange();
+          handleCheckboxChange();
         }}
       />
       <span className="more-pseudo"></span>
@@ -48,7 +48,7 @@ export default function ThemeSwitcher(props: ThemeSwitcherProps) {
     setCbChecked(!cbChecked);
   }
 
-  function handleChackboxChange() {
+  function handleCheckboxChange() {
     console.log('checkbox toggled');
   }
 }
