@@ -1,12 +1,16 @@
 import './main-heading.scss';
 import cn from 'classnames';
 
+interface MainHeadingProps {
+  className?: string;
+  title?: string;
+}
 
-export default function MainHeading(props: any) {
+export default function MainHeading(props: MainHeadingProps) {
   const { title = 'Title', className } = { ...props };
-  const headerClassName = cn('main-heading', className);
+  const classNames = cn('main-heading', className);
 
   return <h2
-    className={headerClassName}
+    className={classNames}
   > {title} </h2>;
 }

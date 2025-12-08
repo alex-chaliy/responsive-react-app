@@ -4,7 +4,11 @@ import './theme-switcher.scss';
 import cn from 'classnames';
 import Image from 'next/image';
 
-export default function ThemeSwitcher(props: any) {
+interface ThemeSwitcherProps {
+  className?: string;
+}
+
+export default function ThemeSwitcher(props: ThemeSwitcherProps) {
   const { className } = { ...props };
   const [cbChecked, setCbChecked] = useState(true);
   const classNames = cn('theme-switcher', className, { 'theme-night': !cbChecked });
