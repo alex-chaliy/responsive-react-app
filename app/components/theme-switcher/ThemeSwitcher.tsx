@@ -1,30 +1,37 @@
 'use client';
-import { useState } from 'react';
+
 import './theme-switcher.scss';
 import cn from 'classnames';
 import Image from 'next/image';
+import SunnyMoonSprite from '../svg/SunnyMoonSprite';
+
+import { useMainStore } from '../../store/MainStore';
 
 interface ThemeSwitcherProps {
   className?: string;
 }
 
 export default function ThemeSwitcher(props: ThemeSwitcherProps) {
+  const currentTheme = useMainStore((s) => s.theme);
+  const switchTheme = useMainStore((state) => state.switchTheme);
+
   const { className } = { ...props };
-  const [cbChecked, setCbChecked] = useState(true);
-  const classNames = cn('theme-switcher', className, { 'theme-night': !cbChecked });
+  const classNames = cn('theme-switcher', className, {
+    'tsw-mode-night': currentTheme === 'dark',
+  });
 
   return (
     <div
       className={classNames}
       onClick={() => {
-        toggleCheckbox();
+        toggleTheme();
       }}
     >
       <input
         className="checkbox"
         type="checkbox"
         name="theme-switch-checkbox"
-        checked={cbChecked}
+        checked={currentTheme === 'light'}
         onChange={() => {
           handleCheckboxChange();
         }}
@@ -32,23 +39,24 @@ export default function ThemeSwitcher(props: ThemeSwitcherProps) {
       <span className="more-pseudo"></span>
       <div className="sunny-moon-element">
         <div className="img-wrap">
-          <Image
-            className="sunny-moon-image"
+          {/* <Image
+            
             src="/svg/sunny-moon-sprite.svg"
             alt="theme switch"
-            width="12"
-            height="34"
-          />
+            width={12}
+            height={34}
+          /> */}
+          <SunnyMoonSprite className="tsw-sunny-moon-sprite" width={15} height={36} />
         </div>
       </div>
     </div>
   );
 
-  function toggleCheckbox() {
-    setCbChecked(!cbChecked);
+  function toggleTheme(): void {
+    switchTheme();
   }
 
-  function handleCheckboxChange() {
+  function handleCheckboxChange(): void {
     console.log('checkbox toggled');
   }
 }

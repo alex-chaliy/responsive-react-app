@@ -5,7 +5,25 @@ https://responsive-react-app.appwrite.network/
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# References
+
+### State Managment - Zustand
+Npm: https://www.npmjs.com/package/zustand
+
+Github: https://github.com/pmndrs/zustand?tab=readme-ov-file#typescript-usage
+
+Playground: https://stackblitz.com/github/pmndrs/zustand/tree/main/examples/starter?file=src%2Findex.tsx
+
+
+
+### React Life-cycle methods with useEffect approach
+For example, *componentDidMount* method, this is like ngOnInit in Angular
+
+more about life-cycle methods using useEffect way:
+https://medium.com/@a.pouryousefi98/react-lifecycles-with-useeffect-480e67d11eb2
+    
+
+# Getting Started
 
 First, run the development server:
 

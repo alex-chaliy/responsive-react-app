@@ -47,19 +47,19 @@ $sunny-moon-el-margin: 2px;
     }
   }
 
-  .sunny-moon-image {
+  .tsw-sunny-moon-sprite {
     transition: top 0.2s ease-in;
     position: relative;
-    left: 4px;
-    top: -16px;
+    left: 3.6px;
+    top: -18px;
   }
 
-  &.theme-night {
+  &.tsw-mode-night {
     .sunny-moon-element {
       left: $switch-width - $sunny-moon-el-width - $sunny-moon-el-margin;
     }
-    .sunny-moon-image {
-      top: 4px;
+    .tsw-sunny-moon-sprite {
+      top: 3.9px;
     }
   }
 
