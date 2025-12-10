@@ -1,0 +1,8 @@
+@import './colors.dark.scss';
+@import './components/index';
+@import './layouts/index';
+
+body.theme-dark {
+  color: $td_white;
+  background-color: $td_bg-color;
+}
