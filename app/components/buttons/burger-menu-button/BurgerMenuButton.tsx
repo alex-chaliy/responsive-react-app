@@ -11,10 +11,10 @@ export default function BurgerMenuButton(props: BurgerMenuButtonProps) {
   const classNames = cn('burger-menu-button', className);
   return (
     <button className={classNames}>
-      <span className="hover-layout">
-        <span className="hl-more-pseudo" />
+      <span className="rra-hover-layout">
+        <span className="rra-hl-more-pseudo" />
       </span>
-      <span className="more-pseudo" />
+      <span className="rra-more-pseudo" />
       <BurgerMenuIcon className="menu-image" />
     </button>
   );

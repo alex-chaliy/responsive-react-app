@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 import type {} from '@redux-devtools/extension'; // required for devtools typing
-import { ThemesType } from '../models/theme.model';
+import { ThemesType } from '../models/Theme.model';
 import { DEFAULT_THEME } from '../constants/theme.constants';
 
 interface MainState {

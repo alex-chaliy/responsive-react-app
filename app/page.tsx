@@ -2,6 +2,7 @@
 
 import Header from './layouts/header/Header';
 import MainPage from './pages/main/MainPage';
+import SignInPage from './pages/sign-in/SignInPage';
 
 import { useMainStore } from './store/MainStore';
 import { useEffect } from 'react';
@@ -14,10 +15,14 @@ export default function Home() {
   }, [currentTheme]);
 
   return (
-    <main className="page">
-      <Header />
-      <MainPage />
-    </main>
+    <div className="rra-page-wrap">
+      {/* <img className="rra-page-bg-stripes" src={`/stripes-for-theme-${currentTheme}.png`} alt="" /> */}
+      <main className="page">
+        <Header />
+        <MainPage />
+        {/* <SignInPage /> */}
+      </main>
+    </div>
   );
 
   function setThemeToHtml(): void {

@@ -1,8 +1,8 @@
-@import '../../../scss/helpers/button-base.scss';
-@import '../../../scss/helpers/button-glass-effect.scss';
+@use '../../../scss/helpers/button-base.scss' as *;
+@use '../../../scss/helpers/button-glass-effect.scss' as *;
 
-@import '../../../scss/variables/constants.scss';
-@import '../../../scss/variables/colors.scss';
+@use '../../../scss/variables/constants.scss' as *;
+@use '../../../scss/variables/colors.scss' as *;
 
 .burger-menu-button {
   @extend .button-base, .button-glass-effect;

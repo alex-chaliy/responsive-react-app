@@ -1,29 +1,31 @@
-@import '../../scss/variables/colors.scss';
-@import '../../scss/helpers/pseudo-el-base.scss';
+@use '../../scss/variables/colors.scss' as *;
+@use '../../scss/helpers/pseudo-el-base.scss' as *;
 
 $header-height: 48px;
 
 .header-layout {
   display: flex;
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   padding: 16px 22px;
   width: 100%;
 
   .header {
-    position: relative;
     background-color: $header-bg;
+    height: $header-height;
+    border-radius: $header-height;
+    padding: 8px;
+
+    position: relative;
     backdrop-filter: blur(5px);
     box-shadow: 6px 5px 12px 1px rgba(#000, 0.3);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: $header-height;
     width: 100%;
-    border-radius: $header-height;
-    padding: 8px;
 
     &:before {
       @include pseudo-el-base;

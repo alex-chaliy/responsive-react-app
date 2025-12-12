@@ -5,6 +5,11 @@ https://responsive-react-app.appwrite.network/
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# App Prefix
+rra - app prefix - responsive react app
+
+Used to isolate your styles scope
+
 # References
 
 ### State Managment - Zustand

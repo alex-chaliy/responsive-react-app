@@ -1,0 +1,23 @@
+// Lists
+$list-gap-left: 16px;
+
+.rra-common-list {
+  &-layer-first {
+    margin: 0;
+  }
+
+  &-layer-first,
+  &-layer-second {
+    padding-left: $list-gap-left;
+  }
+  &-layer-third {
+    padding-left: $list-gap-left * 1.5;
+  }
+}
+
+ol {
+  list-style-type: decimal;
+}
+ul {
+  list-style-type: disc;
+}

@@ -1,0 +1,18 @@
+.rra-flex {
+  display: flex;
+
+  &-between {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-column {
+    flex-direction: column;
+  }
+}

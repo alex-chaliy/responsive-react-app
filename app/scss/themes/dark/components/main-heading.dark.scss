@@ -1,7 +1,7 @@
-@import '../colors.dark.scss';
+@use '../colors.dark.scss' as *;
 
 .theme-dark {
-  .main-heading {
+  .rra-main-heading {
     color: $td_cyan;
   }
 }

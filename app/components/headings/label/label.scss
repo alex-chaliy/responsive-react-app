@@ -1,0 +1,9 @@
+@use '../../../scss/variables/colors.scss' as *;
+
+.rra-label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.15px;
+  text-align: center;
+}

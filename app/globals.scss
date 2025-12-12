@@ -1,16 +1,36 @@
-@import 'scss/resets.scss';
-@import 'scss/variables/colors.scss';
-@import 'scss/themes/dark/theme-dark';
+@use 'scss/resets.scss' as *;
+@use 'scss/core/elements/index' as *;
+@use 'scss/core/helpers/index' as *;
+@use 'scss/variables/colors.scss' as *;
+@use 'scss/themes/dark/theme-dark' as *;
 
+body, html {
+  width: 100%;
+  height: 100%;
+}
 
 body {
-  background: $bg-color;
+  background: $page-bg-color;
   color: $black;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
   margin: 0;
   padding: 0;
+}
+
+.rra-page-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.rra-page-bg-stripes {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  opacity: .5;
 }
 
 * {

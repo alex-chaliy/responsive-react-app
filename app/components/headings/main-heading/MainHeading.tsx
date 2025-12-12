@@ -8,7 +8,7 @@ interface MainHeadingProps {
 
 export default function MainHeading(props: MainHeadingProps) {
   const { title = 'Title', className } = { ...props };
-  const classNames = cn('main-heading', className);
+  const classNames = cn('rra-main-heading', className);
 
   return <h2
     className={classNames}

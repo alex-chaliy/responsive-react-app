@@ -1,1 +1,2 @@
-@import './main-heading.dark.scss';
+@use './main-heading.dark.scss' as *;
+@use './glass-card.dark.scss' as *;

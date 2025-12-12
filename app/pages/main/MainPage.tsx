@@ -4,22 +4,22 @@ import SubHeading from '../../components/headings/sub-heading/SubHeading';
 
 export default function MainPage() {
   return (
-    <div className="main-page">
+    <div className="rra-main-page">
       <MainHeading
-        className="main-page-heading"
+        className="rra-main-page-heading"
         title={'Test Task: Mobile Header & Text Block'}
       />
       <SubHeading
-        className="main-page-sub-heading"
+        className="rra-main-page-sub-heading"
         title={'Acceptance Criteria (AC)'}
       />
-      <div className="main-page-text">
+      <div className="rra-main-page-text">
         We want to evaluate your attention to UI details, component structure,
         and CSS skills. We are not testing complex global state management here.
-        <ol className="common-list common-list-layer-first">
+        <ol className="rra-common-list rra-common-list-layer-first">
           <li>
             Layout & Responsiveness
-            <ul className="common-list-layer-second">
+            <ul className="rra-common-list-layer-second">
               <li>
                 Design Compliance: Implement the Header and the main content
                 block (text) strictly according to the design{' '}
@@ -40,10 +40,10 @@ export default function MainPage() {
 
           <li>
             Interactions & Animations
-            <ul className="common-list-layer-second">
+            <ul className="rra-common-list-layer-second">
               <li>
                 Theme Switcher Component:
-                <ul className="common-list-layer-third">
+                <ul className="rra-common-list-layer-third">
                   <li>Implement the custom UI for the Theme Switcher.</li>
                   <li>
                     Requirement: The switcher must be interactive and feature a
@@ -67,7 +67,7 @@ export default function MainPage() {
 
           <li>
             Technical Stack
-            <ul className="common-list-layer-second">
+            <ul className="rra-common-list-layer-second">
               <li>Core: React, TypeScript.</li>
               <li>
                 Styling: Your preferred modern approach (CSS Modules, SCSS,

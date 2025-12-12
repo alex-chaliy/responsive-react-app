@@ -1,8 +1,8 @@
-@import '../../scss/helpers/pseudo-el-base.scss';
-@import '../../scss/helpers/button-base.scss';
-@import '../../scss/helpers/button-pressed-glass-effect.scss';
+@use '../../scss/helpers/pseudo-el-base.scss' as *;
+@use '../../scss/helpers/button-base.scss' as *;
+@use '../../scss/helpers/button-pressed-glass-effect.scss' as *;
 
-@import '../../scss/variables/constants.scss';
+@use '../../scss/variables/constants.scss' as *;
 
 $switch-width: 48px;
 $switch-height: 24px;

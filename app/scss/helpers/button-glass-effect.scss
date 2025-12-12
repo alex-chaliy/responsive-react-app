@@ -1,7 +1,7 @@
-@import './pseudo-el-base.scss';
-@import '../variables/constants.scss';
+@use './pseudo-el-base.scss' as *;
+@use '../variables/constants.scss' as *;
 
-@import '../variables/colors.scss';
+@use '../variables/colors.scss' as *;
 
 .button-glass-effect {
   position: relative;
@@ -23,16 +23,16 @@
   }
 
   // a small inner shadow
-  .more-pseudo:before {
+  .rra-more-pseudo:before {
     @include pseudo-el-base;
     border-radius: $button-height;
     box-shadow: inset 1px 1px 6px 1px rgba(#000, 0.25);
   }
 
   // set up containers for additional pseudo elements
-  .more-pseudo,
-  .hover-layout,
-  .hl-more-pseudo {
+  .rra-more-pseudo,
+  .rra-hover-layout,
+  .rra-hl-more-pseudo {
     display: block;
     width: 100%;
     height: 100%;
@@ -47,17 +47,17 @@
   transition: color 0.5s;
   &:before,
   &:after,
-  .more-pseudo:before,
-  .hover-layout {
+  .rra-more-pseudo:before,
+  .rra-hover-layout {
     transition: opacity 0.4s;
   }
 
-  .hover-layout {
+  .rra-hover-layout {
     opacity: 0;
 
     &:before,
     &:after,
-    .hl-more-pseudo:before {
+    .rra-hl-more-pseudo:before {
       @include pseudo-el-base;
       border-radius: $button-height;
     }
@@ -73,10 +73,10 @@
       z-index: 1;
     }
     // inner shadow
-    .hl-more-pseudo:before {
+    .rra-hl-more-pseudo:before {
       box-shadow: inset -1px 1px 5px 3px rgba(#000, 0.25);
     }
-    .hl-more-pseudo {
+    .rra-hl-more-pseudo {
       background-color: rgba(#000, 0.01);
     }
   }
@@ -86,11 +86,11 @@
     color: $cyan;
     &:before,
     &:after,
-    .more-pseudo:before {
+    .rra-rra-more-pseudo:before {
       opacity: 0;
     }
 
-    .hover-layout {
+    .rra-hover-layout {
       opacity: 1;
     }
   }

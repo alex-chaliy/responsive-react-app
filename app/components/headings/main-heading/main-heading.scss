@@ -1,6 +1,6 @@
-@import '../../../scss/variables/colors.scss';
+@use '../../../scss/variables/colors.scss' as *;
 
-.main-heading {
+.rra-main-heading {
   color: $blue;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;

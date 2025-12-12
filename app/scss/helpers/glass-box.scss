@@ -1,0 +1,32 @@
+@use '../variables/colors.scss' as *;
+@use '../helpers/pseudo-el-base.scss' as *;
+
+@mixin rra-glass-box($border-radius: 16px, $height: auto, $width: auto) {
+  background-color: $glass-box-bg;
+  border-radius: $border-radius;
+  padding: 16px;
+  height: $height;
+  width: $width;
+
+  position: relative;
+  backdrop-filter: blur(5px);
+  box-shadow: 6px 5px 12px 1px rgba(#000, 0.3);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  justify-self: center;
+
+  &:before {
+    @include pseudo-el-base;
+    box-shadow: inset 3px 4px 2px -3px rgba(#fff, 0.7);
+    border-radius: $border-radius;
+  }
+
+  &:after {
+    @include pseudo-el-base;
+    border-radius: $border-radius;
+    box-shadow: inset -3px -4px 3px -3px rgba(#000, 0.7);
+  }
+}

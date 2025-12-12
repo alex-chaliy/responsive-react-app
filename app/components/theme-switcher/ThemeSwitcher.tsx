@@ -2,7 +2,6 @@
 
 import './theme-switcher.scss';
 import cn from 'classnames';
-import Image from 'next/image';
 import SunnyMoonSprite from '../svg/SunnyMoonSprite';
 
 import { useMainStore } from '../../store/MainStore';
@@ -36,16 +35,9 @@ export default function ThemeSwitcher(props: ThemeSwitcherProps) {
           handleCheckboxChange();
         }}
       />
-      <span className="more-pseudo"></span>
+      <span className="rra-more-pseudo"></span>
       <div className="sunny-moon-element">
         <div className="img-wrap">
-          {/* <Image
-            
-            src="/svg/sunny-moon-sprite.svg"
-            alt="theme switch"
-            width={12}
-            height={34}
-          /> */}
           <SunnyMoonSprite className="tsw-sunny-moon-sprite" width={15} height={36} />
         </div>
       </div>

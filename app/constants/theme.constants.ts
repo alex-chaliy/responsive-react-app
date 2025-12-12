@@ -1,3 +1,3 @@
-import { ThemesType } from '../models/theme.model';
+import { ThemesType } from '../models/Theme.model';
 
 export const DEFAULT_THEME: ThemesType = 'light';
