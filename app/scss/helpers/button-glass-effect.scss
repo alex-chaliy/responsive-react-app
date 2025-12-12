@@ -78,6 +78,7 @@
     }
     .rra-hl-more-pseudo {
       background-color: rgba(#000, 0.01);
+      transition: background-color .3s;
     }
   }
 
@@ -92,6 +93,12 @@
 
     .rra-hover-layout {
       opacity: 1;
+    }
+  }
+
+  &:active {
+    .rra-hl-more-pseudo {
+      background-color: rgba(#000, 0.05);
     }
   }
 }

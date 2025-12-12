@@ -19,8 +19,8 @@ export default function Home() {
       {/* <img className="rra-page-bg-stripes" src={`/stripes-for-theme-${currentTheme}.png`} alt="" /> */}
       <main className="page">
         <Header />
-        <MainPage />
-        {/* <SignInPage /> */}
+        {/* <MainPage /> */}
+        <SignInPage />
       </main>
     </div>
   );
