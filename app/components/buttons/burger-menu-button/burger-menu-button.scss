@@ -5,7 +5,7 @@
 @use '../../../scss/variables/colors.scss' as *;
 
 .burger-menu-button {
-  @extend .button-base, .button-glass-effect;
+  @extend .rra-button-base, .button-glass-effect;
   width: $button-height;
   padding: 0;
 

@@ -1,0 +1,59 @@
+@use '../../scss/helpers/button-base.scss' as *;
+@use '../../scss/helpers/button-glass-effect.scss' as *;
+@use '../../scss/variables/colors.scss' as *;
+@use '../../scss/core/mixins/position.scss' as *;
+
+$input-font-size: 12px;
+
+.rra-text-input {
+  @include position(relative);
+  display: flex;
+
+  &-field {
+    @extend .rra-button-base;
+    @include position(absolute, 0, 0);
+    padding: 4px 12px;
+    color: $white;
+    width: 100%;
+    z-index: 1;
+    font-size: $input-font-size;
+
+    &:-webkit-autofill,
+    &:autofill {
+      font-size: $input-font-size;
+      -webkit-text-fill-color: $white;
+      filter: none !important;
+      // background-color: transparent !important;
+      // remove autofill background-color,
+      // idk why `transition` prop works here, but `background-color doesn't`
+      // that's vwry wondering
+      transition: background-color 5000s ease-in-out 0s !important;
+      caret-color: $white !important;
+    }
+
+    &::placeholder {
+      /* Standard syntax for Chrome, Firefox, Opera, Safari, Edge */
+      color: $white;
+      opacity: 0.55;
+    }
+
+    &:focus::placeholder {
+      opacity: .8;
+    }
+  }
+
+  &-label {
+    @extend .button-glass-effect;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &-field:focus + &-label {
+    border: 1px solid $white;
+    z-index: 0;
+
+    .rra-hover-layout {
+      opacity: 0.5;
+    }
+  }
+}

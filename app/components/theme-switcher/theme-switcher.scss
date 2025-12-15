@@ -11,7 +11,7 @@ $sunny-moon-el-width: 20px;
 $sunny-moon-el-margin: 2px;
 
 .theme-switcher {
-  @extend .button-base, .button-pressed-glass-effect;
+  @extend .rra-button-base, .button-pressed-glass-effect;
   width: $switch-width;
   min-width: $switch-width;
   height: $switch-height;

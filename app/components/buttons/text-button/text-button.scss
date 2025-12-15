@@ -4,7 +4,7 @@
 @use '../../../scss/variables/colors.scss' as *;
 
 .rra-text-button {
-  @extend .button-base, .button-glass-effect;
+  @extend .rra-button-base, .button-glass-effect;
   color: $white;
 
   &-sm {

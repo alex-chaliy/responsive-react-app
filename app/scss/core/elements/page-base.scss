@@ -6,4 +6,15 @@
   .rra-main-heading {
     margin-bottom: 16px;
   }
+
+  .rra-glass-card {
+    min-width: 215px;
+  }
+}
+
+.rra-page-base-centered {
+  @extend .rra-page-base;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

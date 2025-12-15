@@ -1,6 +1,7 @@
 import './logo.scss';
 import cn from 'classnames';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface LogoProps {
   className?: string;
@@ -10,14 +11,23 @@ interface LogoProps {
 }
 
 export default function Logo(props: LogoProps) {
-  const { className, width = 26, height = 19.25, alt = 'App Logo' } = { ...props };
+  const {
+    className,
+    width = 26,
+    height = 19.25,
+    alt = 'App Logo',
+  } = { ...props };
   const classNames = cn('logo', className);
 
-  return <Image
-    className={classNames}
-    src="/svg/logo.svg"
-    alt={alt}
-    width={width}
-    height={height}
-  />;
+  return (
+    <Link href="/">
+      <Image
+        className={classNames}
+        src="/svg/logo.svg"
+        alt={alt}
+        width={width}
+        height={height}
+      />
+    </Link>
+  );
 }
