@@ -1,38 +1,18 @@
 'use client';
 
+import { useSetThemeToHtml } from './hooks/useSetThemeToHtml';
 import Header from './layouts/header/Header';
-import MainPage from './pages/main/MainPage';
-import SignInPage from './pages/sign-in/SignInPage';
-
-import { useMainStore } from './store/MainStore';
-import { useEffect } from 'react';
+import MainPage from './pages/main/page';
 
 export default function Home() {
-  const currentTheme = useMainStore((store) => store.theme);
-
-  useEffect(() => {
-    setThemeToHtml();
-  }, [currentTheme]);
+  useSetThemeToHtml();
 
   return (
     <div className="rra-page-wrap">
-      {/* <img className="rra-page-bg-stripes" src={`/stripes-for-theme-${currentTheme}.png`} alt="" /> */}
       <main className="page">
         <Header />
-        {/* <MainPage /> */}
-        <SignInPage />
+        <MainPage />
       </main>
     </div>
   );
-
-  function setThemeToHtml(): void {
-    // localStorage and document are not available on server-side, because they are browser features
-    // so we need to check if we can use them
-    if (currentTheme === 'light') {
-      document.body.classList.remove('theme-dark');
-    } else {
-      document.body.classList.remove('theme-light');
-    }
-    document.body.classList.add(`theme-${currentTheme}`);
-  }
 }

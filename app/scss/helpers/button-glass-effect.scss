@@ -101,4 +101,9 @@
       background-color: rgba(#000, 0.05);
     }
   }
+
+  &.rra-link-active {
+    color: $cyan;
+    pointer-events: none;
+  }
 }
