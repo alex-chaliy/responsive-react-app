@@ -13,7 +13,8 @@ export default function Header() {
         </div>
         <div className="nav-wrap">
           <ThemeSwitcher className="header-theme-switcher" />
-          <TextButton title={'Sign in'} mode={'link'} linkHref={'/pages/sign-in'} />
+          <TextButton className="header-text-button" title={'PG'} mode={'link'} linkHref={'/pages/playground'} />
+          <TextButton className="header-text-button" title={'Sign in'} mode={'link'} linkHref={'/pages/sign-in'} />
           <BurgerMenuButton className="header-menu-button" />
         </div>
       </header>

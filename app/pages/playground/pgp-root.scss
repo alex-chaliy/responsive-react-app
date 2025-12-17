@@ -1,0 +1,30 @@
+@use '../../scss/core/page/page-base.scss' as *;
+@use '../../scss/core/helpers/flex.scss' as *;
+
+.pgp-root {
+  &-action-button {
+    width: 150px;
+  }
+
+  &-nav-element {
+    @extend .rra-flex-center-center, .rra-flex-column;
+    padding: 0 10px 15px;
+
+    &-sub-heading {
+      width: 150px;
+      height: 3em;
+    }
+  }
+
+  .playground-page-content {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 400px) {
+  .pgp-root {
+    &-nav-element {
+      width: 100%;
+    }
+  }
+}

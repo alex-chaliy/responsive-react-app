@@ -6,18 +6,24 @@ import { UIElementSizes } from '../../../models/UIElementSizes.model';
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect } from 'react';
 
 type TextButtonModes = 'button' | 'link';
 const DEFAULT_TEXT_BUTTON_MODE: TextButtonModes = 'button';
+
+type TextButtonPlaceOnBGTypes = 'dark' | 'light';
+const DEFAULT_PLACE_ON_BG: TextButtonPlaceOnBGTypes = 'dark';
 
 interface TextButtonProps {
   className?: string;
   title?: string;
   size?: UIElementSizes;
+
   mode?: TextButtonModes;
-  handleClick?: () => void;
-  linkHref?: string;
+  handleClick?: () => void; // works with mode 'button'
+  linkHref?: string; // works with mode 'link'
+  linkTarget?: string;
+
+  placeOnBg?: TextButtonPlaceOnBGTypes;
 }
 
 export default function TextButton(props: TextButtonProps) {
@@ -28,6 +34,8 @@ export default function TextButton(props: TextButtonProps) {
     mode = DEFAULT_TEXT_BUTTON_MODE,
     handleClick,
     linkHref = '',
+    linkTarget,
+    placeOnBg = DEFAULT_PLACE_ON_BG,
   } = { ...props };
 
   const isLinkActive = usePathname() === linkHref;
@@ -36,15 +44,17 @@ export default function TextButton(props: TextButtonProps) {
     'rra-text-button',
     className,
     `rra-text-button-${size}`,
-    `rra-text-button-mode-${mode}`, {
-      'rra-link-active': isLinkActive
+    `rra-text-button-mode-${mode}`,
+    `rra-text-button-place-on-bg-${placeOnBg}`,
+    {
+      'rra-link-active': isLinkActive,
     }
   );
 
   if (mode === 'link') {
     return (
       <>
-        <Link className={classNames} href={linkHref}>
+        <Link className={classNames} href={linkHref} target={linkTarget}>
           <span className="rra-hover-layout">
             <span className="rra-hl-more-pseudo" />
           </span>

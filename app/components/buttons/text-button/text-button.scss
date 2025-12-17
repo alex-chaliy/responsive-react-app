@@ -12,4 +12,8 @@
     padding: 2px 8px;
     font-size: 10px;
   }
+
+  &-place-on-bg-light {
+    background-color: rgba($primary-color, .8);
+  }
 }

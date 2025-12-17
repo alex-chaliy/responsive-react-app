@@ -1,0 +1,14 @@
+@use '../../scss/core/page/page-base.scss' as *;
+@use '../../scss/core/helpers/flex.scss' as *;
+
+.playground-page {
+  @extend .rra-page-base-centered;
+  flex-direction: column;
+  min-width: 250px;
+
+  &-content {
+    @extend .rra-flex-between-center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}

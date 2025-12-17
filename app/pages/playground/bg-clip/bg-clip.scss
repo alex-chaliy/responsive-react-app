@@ -1,0 +1,33 @@
+@use '../../../scss/variables/colors.scss' as *;
+@use '../../../scss/functions.scss' as *;
+
+.pgp-bg-clip {
+  &__logo-wrap {
+    position: relative;
+    display: flex;
+  }
+
+  $logo_w: 130px;
+  $logo_h: 96.25px;
+
+  &__logo {
+    position: relative;
+    z-index: 0;
+    width: rem_($logo_w);
+    height: rem_($logo_h);
+  }
+
+  &__clip-block {
+    clip-path: circle(40%);
+
+    // position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    border-radius: 10px;
+    background-color: $white;
+    width: rem_($logo_w);
+    height: rem_($logo_h);
+  }
+}
