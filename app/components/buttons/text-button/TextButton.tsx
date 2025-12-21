@@ -7,11 +7,11 @@ import { UIElementSizes } from '../../../models/UIElementSizes.model';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-type TextButtonModes = 'button' | 'link';
-const DEFAULT_TEXT_BUTTON_MODE: TextButtonModes = 'button';
-
-type TextButtonPlaceOnBGTypes = 'dark' | 'light';
-const DEFAULT_PLACE_ON_BG: TextButtonPlaceOnBGTypes = 'dark';
+import { TextButtonModes, TextButtonPlaceOnBGTypes } from './TextButton.model';
+import {
+  DEFAULT_PLACE_ON_BG,
+  DEFAULT_TEXT_BUTTON_MODE,
+} from './TextButton.constants';
 
 interface TextButtonProps {
   className?: string;

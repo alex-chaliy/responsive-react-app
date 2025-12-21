@@ -3,6 +3,12 @@
 
 @use '../variables/colors.scss' as *;
 
+
+// A simplified Glass effect with some blicks and shadows, for buttons
+
+// It looks like a liquid glass, because of blicks and shadows
+// But it doesn't have a Liquid Glass effect on bg with Glass Distortion
+
 .button-glass-effect {
   position: relative;
   background-color: rgba(#000, 0.05);

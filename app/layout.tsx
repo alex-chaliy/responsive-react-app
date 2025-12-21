@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Roboto, Montserrat } from 'next/font/google';
 import './globals.scss';
+import LiquidGlassDistortion from './components/svg/LiquidGlassDistortion';
 
 const robotoFont = Roboto({
   variable: '--font-roboto',
@@ -22,8 +23,8 @@ export const viewport: Viewport = {
   initialScale: 1.0,
   minimumScale: 1.0,
   maximumScale: 1.0,
-  userScalable: false
-}
+  userScalable: false,
+};
 
 export default function RootLayout({
   children,
@@ -36,6 +37,8 @@ export default function RootLayout({
         className={`${robotoFont.variable} ${montserratFont.variable} antialiased`}
       >
         {children}
+
+        <LiquidGlassDistortion />
       </body>
     </html>
   );

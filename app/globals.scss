@@ -6,19 +6,34 @@
 
 @use 'scss/variables/constants.scss' as *;
 
-body, html {
+@mixin body-background {
+  background: image-set(
+      url('/bg/AppleMac_1x.jpg') 1x,
+      url('/bg/AppleMac_2x.jpg') 2x
+    )
+    0 0 repeat;
+  background-size: 150% 150%;
+  background-attachment: fixed;
+  animation: bg-position infinite ease-in 10s;
+}
+
+body,
+html {
   width: 100%;
   height: 100%;
 }
 
 body {
-  background: $page-bg-color;
   color: $black;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: $root-font-size;
+  text-shadow: 1px 1px 5px rgba(#000, 0.1);
   margin: 0;
   padding: 0;
+
+  @include body-background();
+  background-color: $page-bg-color;
 }
 
 .rra-page-wrap {
@@ -31,10 +46,25 @@ body {
   z-index: -1;
   width: 100%;
   height: 100%;
-  object-fit:cover;
-  opacity: .5;
+  object-fit: cover;
+  opacity: 0.5;
 }
 
 * {
   box-sizing: border-box;
+}
+
+@keyframes bg-position {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: -50px 50px;
+  }
+  50% {
+    background-position: 0px 25px;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
 }

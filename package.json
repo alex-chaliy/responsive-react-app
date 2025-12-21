@@ -9,8 +9,12 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "classnames": "^2.5.1",
-    "next": "16.0.7",
+    "formik": "^2.4.9",
+    "i": "^0.3.7",
+    "next": "^16.1.0",
+    "npm": "^11.7.0",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "zustand": "^5.0.9"

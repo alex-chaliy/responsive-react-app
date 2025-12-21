@@ -1,5 +1,5 @@
 @use '../../scss/variables/colors.scss' as *;
-@use '../../scss/helpers/pseudo-el-base.scss' as *;
+@use '../../scss/helpers/glass-box.scss' as *;
 
 $header-height: 48px;
 
@@ -13,31 +13,14 @@ $header-height: 48px;
   width: 100%;
 
   .header {
+    @include rra-glass-box($header-height, $header-height, 100%);
     background-color: $header-bg;
-    height: $header-height;
-    border-radius: $header-height;
+
     padding: 8px;
 
-    position: relative;
-    backdrop-filter: blur(5px);
-    box-shadow: 6px 5px 12px 1px rgba(#000, 0.3);
-
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-
-    &:before {
-      @include pseudo-el-base;
-      box-shadow: inset 3px 4px 2px -3px rgba(#fff, 0.7);
-      border-radius: $header-height;
-    }
-
-    &:after {
-      @include pseudo-el-base;
-      border-radius: $header-height;
-      box-shadow: inset -3px -4px 3px -3px rgba(#000, 0.7);
-    }
   }
 
   .header-logo {
