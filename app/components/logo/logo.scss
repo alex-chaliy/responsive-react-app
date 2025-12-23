@@ -1,3 +1,7 @@
-.logo {
+@use './../../scss/animations/animations.scss' as *;
+
+.rra-logo {
   cursor: pointer;
+  position: relative;
+  animation: rra-bounce 1s ease-out;
 }

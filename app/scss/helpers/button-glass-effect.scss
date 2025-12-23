@@ -3,6 +3,11 @@
 
 @use '../variables/colors.scss' as *;
 
+// A simplified Glass effect with some blicks and shadows, for buttons
+
+// It looks like a liquid glass, because of blicks and shadows
+// But it doesn't have a Liquid Glass effect on bg with Glass Distortion
+
 .button-glass-effect {
   position: relative;
   background-color: rgba(#000, 0.05);
@@ -46,7 +51,9 @@
   }
 
   // button states
-  transition: color 0.5s;
+  transform: scale(1);
+  transition: transform 0.1s, color 0.5s;
+
   &:before,
   &:after,
   .rra-more-pseudo:before,
@@ -80,7 +87,7 @@
     }
     .rra-hl-more-pseudo {
       background-color: rgba(#000, 0.01);
-      transition: background-color .3s;
+      transition: background-color 0.3s;
     }
   }
 
@@ -99,6 +106,8 @@
   }
 
   &:active {
+    transform: scale(1.05);
+
     .rra-hl-more-pseudo {
       background-color: rgba(#000, 0.05);
     }

@@ -1,6 +1,8 @@
 @use '../variables/colors.scss' as *;
 @use '../helpers/pseudo-el-base.scss' as *;
 
+// A usual Liquid Glass effect with some blicks and shadows
+
 @mixin rra-glass-box($border-radius: 16px, $height: auto, $width: auto) {
   background-color: $glass-box-bg;
   border-radius: $border-radius;
@@ -10,6 +12,7 @@
 
   position: relative;
   backdrop-filter: blur(5px);
+  // backdrop-filter: blur(1px) url(#glass-distortion);
   box-shadow: 6px 5px 12px 1px rgba(#000, 0.3);
 
   display: flex;
