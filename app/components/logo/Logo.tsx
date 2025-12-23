@@ -17,10 +17,10 @@ export default function Logo(props: LogoProps) {
     height = 19.25,
     alt = 'App Logo',
   } = { ...props };
-  const classNames = cn('logo', className);
+  const classNames = cn('rra-logo', className);
 
   return (
-    <Link href="/">
+    <Link href="/" className="rra-logo-wrap">
       <Image
         className={classNames}
         src="/svg/logo.svg"
