@@ -1,14 +1,16 @@
+@use '../functions.scss' as *;
+
 @keyframes rra-bounce {
   0% {
+    top: remm(-2px);
+  }
+  75% {
+    top: remm(-3px);
+  }
+  85% {
     top: 0;
   }
-
-  75% { top: -5px; }
-  85% { top: 0; }
-  100% { top: -1.5px; }
+  100% {
+    top: remm(-1.5px);
+  }
 }
-
-
-
-
-
