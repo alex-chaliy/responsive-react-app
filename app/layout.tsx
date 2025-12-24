@@ -3,6 +3,9 @@ import { Roboto, Montserrat } from 'next/font/google';
 import './globals.scss';
 import LiquidGlassDistortion from './components/svg/LiquidGlassDistortion';
 
+// register useGSAP hook and other gsap plugins to avoid React version discrepancies
+import './gsapRegister';
+
 const robotoFont = Roboto({
   variable: '--font-roboto',
   subsets: ['latin'],
