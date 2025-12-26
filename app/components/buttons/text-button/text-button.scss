@@ -3,14 +3,16 @@
 
 @use '../../../scss/variables/colors.scss' as *;
 
+@use '../../../scss/functions.scss' as *;
+
 .rra-text-button {
   @extend .rra-button-base, .button-glass-effect;
   color: $white;
 
   &-sm {
-    height: 25px;
-    padding: 2px 8px;
-    font-size: 10px;
+    height: remm(25px);
+    padding: remm(2px) remm(8px);
+    font-size: remm(10px);
   }
 
   &-place-on-bg-light {

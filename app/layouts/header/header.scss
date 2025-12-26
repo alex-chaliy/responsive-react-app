@@ -1,7 +1,9 @@
 @use '../../scss/variables/colors.scss' as *;
 @use '../../scss/helpers/glass-box.scss' as *;
 
-$header-height: 48px;
+@use '../../scss/functions.scss' as *;
+
+$header-height: remm(48px);
 
 .header-layout {
   display: flex;
@@ -9,14 +11,14 @@ $header-height: 48px;
   z-index: 1;
   top: 0;
   left: 0;
-  padding: 16px 22px;
+  padding: remm(16px) remm(22px);
   width: 100%;
 
   .header {
     @include rra-glass-box($header-height, $header-height, 100%);
     background-color: $header-bg;
 
-    padding: 8px;
+    padding: remm(8px);
 
     flex-direction: row;
     justify-content: space-between;
@@ -24,8 +26,8 @@ $header-height: 48px;
   }
 
   .header-logo {
-    margin-left: 15px;
-    margin-top: 5px;
+    margin-left: remm(15px);
+    margin-top: remm(5px);
   }
 
   .logo-wrap,
@@ -41,14 +43,14 @@ $header-height: 48px;
   }
 
   .header-menu-button {
-    margin-left: 8px;
+    margin-left: remm(8px);
   }
 
   .header-text-button {
-    margin-left: 8px;
+    margin-left: remm(8px);
   }
 
   .header-theme-switcher {
-    margin-left: 8px;
+    margin-left: remm(8px);
   }
 }

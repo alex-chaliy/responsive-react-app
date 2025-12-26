@@ -2,8 +2,9 @@
 @use '../../scss/helpers/button-glass-effect.scss' as *;
 @use '../../scss/variables/colors.scss' as *;
 @use '../../scss/core/mixins/position.scss' as *;
+@use '../../scss/functions.scss' as *;
 
-$input-font-size: 12px;
+$input-font-size: remm(12px);
 
 .rra-text-input {
   @include position(relative);
@@ -12,7 +13,7 @@ $input-font-size: 12px;
   &-field {
     @extend .rra-button-base;
     @include position(absolute, 0, 0);
-    padding: 4px 12px;
+    padding: remm(4px) remm(12px);
     color: $white;
     width: 100%;
     z-index: 1;
@@ -38,7 +39,7 @@ $input-font-size: 12px;
     }
 
     &:focus::placeholder {
-      opacity: .8;
+      opacity: 0.8;
     }
   }
 
@@ -49,7 +50,7 @@ $input-font-size: 12px;
   }
 
   &-field:focus + &-label {
-    border: 1px solid $white;
+    border: remm(1px) solid $white;
     z-index: 0;
 
     .rra-hover-layout {

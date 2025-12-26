@@ -1,18 +1,20 @@
 @use '../../scss/core/page/page-base.scss' as *;
 @use '../../scss/core/helpers/flex.scss' as *;
 
+@use '../../scss/functions.scss' as *;
+
 .pgp-root {
   &-action-button {
-    width: 150px;
+    width: remm(150px);
   }
 
   &-nav-element {
     @extend .rra-flex-center-center, .rra-flex-column;
-    padding: 0 10px 15px;
+    padding: 0 remm(10px) remm(15px);
 
     &-sub-heading {
-      width: 150px;
-      height: 3em;
+      width: remm(150px);
+      height: remm(48px);
     }
   }
 

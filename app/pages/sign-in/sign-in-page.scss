@@ -1,27 +1,29 @@
 @use '../../scss/core/page/page-base.scss' as *;
 
-$rra-sign-in-page-control-width: 170px;
-$rra-sign-in-page-sign-in-button-width: 100px;
+@use '../../scss/functions.scss' as *;
+
+$rra-sign-in-page-control-width: remm(170px);
+$rra-sign-in-page-sign-in-button-width: remm(100px);
 
 .rra-sign-in-page {
   @extend .rra-page-base-centered;
 
   &-sign-in-button {
-    margin-bottom: 12px;
+    margin-bottom: remm(12px);
     width: $rra-sign-in-page-sign-in-button-width;
   }
 
   &-sign-up-button {
-    margin-left: 6px;
+    margin-left: remm(6px);
   }
 
   &-input-email {
-    margin-bottom: 8px;
+    margin-bottom: remm(8px);
     width: $rra-sign-in-page-control-width;
   }
 
   &-input-password {
-    margin-bottom: 12px;
+    margin-bottom: remm(12px);
     width: $rra-sign-in-page-control-width;
   }
 }
