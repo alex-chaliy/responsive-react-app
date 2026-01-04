@@ -7,9 +7,14 @@ import { UIElementSizes } from '../../../models/UIElementSizes.model';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { TextButtonModes, TextButtonPlaceOnBGTypes } from './TextButton.model';
+import {
+  TextButtonHtmlTypes,
+  TextButtonModes,
+  TextButtonPlaceOnBGTypes,
+} from './TextButton.model';
 import {
   DEFAULT_PLACE_ON_BG,
+  DEFAULT_TEXT_BUTTON_HTML_TYPE,
   DEFAULT_TEXT_BUTTON_MODE,
 } from './TextButton.constants';
 
@@ -24,6 +29,8 @@ interface TextButtonProps {
   linkTarget?: string;
 
   placeOnBg?: TextButtonPlaceOnBGTypes;
+
+  type?: TextButtonHtmlTypes; // works with mode 'button'
 }
 
 export default function TextButton(props: TextButtonProps) {
@@ -36,6 +43,7 @@ export default function TextButton(props: TextButtonProps) {
     linkHref = '',
     linkTarget,
     placeOnBg = DEFAULT_PLACE_ON_BG,
+    type = DEFAULT_TEXT_BUTTON_HTML_TYPE
   } = { ...props };
 
   const isLinkActive = usePathname() === linkHref;
@@ -66,7 +74,7 @@ export default function TextButton(props: TextButtonProps) {
   }
 
   return (
-    <button className={classNames} onClick={handleClick}>
+    <button className={classNames} onClick={handleClick} type={type}>
       <span className="rra-hover-layout">
         <span className="rra-hl-more-pseudo" />
       </span>

@@ -5,12 +5,13 @@ import cn from 'classnames';
 import SunnyMoonSprite from '../svg/SunnyMoonSprite';
 
 import { useMainStore } from '../../store/MainStore';
+import { memo } from 'react';
 
 interface ThemeSwitcherProps {
   className?: string;
 }
 
-export default function ThemeSwitcher(props: ThemeSwitcherProps) {
+export function ThemeSwitcher(props: ThemeSwitcherProps) {
   const currentTheme = useMainStore((s) => s.theme);
   const switchTheme = useMainStore((state) => state.switchTheme);
 
@@ -38,13 +39,18 @@ export default function ThemeSwitcher(props: ThemeSwitcherProps) {
       <span className="rra-more-pseudo"></span>
       <div className="sunny-moon-element">
         <div className="img-wrap">
-          <SunnyMoonSprite className="tsw-sunny-moon-sprite" width={15} height={36} />
+          <SunnyMoonSprite
+            className="tsw-sunny-moon-sprite"
+            width={15}
+            height={36}
+          />
         </div>
       </div>
     </div>
   );
 
   function toggleTheme(): void {
+    // console.log('toggleTheme() called');
     switchTheme();
   }
 
@@ -52,3 +58,5 @@ export default function ThemeSwitcher(props: ThemeSwitcherProps) {
     console.log('checkbox toggled');
   }
 }
+
+export default memo(ThemeSwitcher);

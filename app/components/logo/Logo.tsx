@@ -1,6 +1,5 @@
 import './logo.scss';
 import cn from 'classnames';
-import Image from 'next/image';
 import Link from 'next/link';
 
 interface LogoProps {
@@ -21,7 +20,7 @@ export default function Logo(props: LogoProps) {
 
   return (
     <Link href="/" className="rra-logo-wrap">
-      <Image
+      <img
         className={classNames}
         src="/svg/logo.svg"
         alt={alt}

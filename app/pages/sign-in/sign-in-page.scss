@@ -11,6 +11,7 @@ $rra-sign-in-page-sign-in-button-width: remm(100px);
   &-sign-in-button {
     margin-bottom: remm(12px);
     width: $rra-sign-in-page-sign-in-button-width;
+    justify-self: center;
   }
 
   &-sign-up-button {

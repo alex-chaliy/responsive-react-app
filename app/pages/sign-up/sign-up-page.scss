@@ -1,0 +1,30 @@
+@use '../../scss/core/page/page-base.scss' as *;
+@use '../../scss/functions.scss' as *;
+
+$rra-sign-up-page-control-width: remm(195px);
+$rra-sign-up-page-sign-up-button-width: remm(100px);
+
+.rra-sign-up-page {
+  @extend .rra-page-base-centered;
+
+  &-input-email,
+  &-input-password,
+  &-input-confirm-password {
+    margin-bottom: remm(8px);
+    width: $rra-sign-up-page-control-width;
+  }
+
+  &-input-confirm-password {
+    margin-bottom: remm(12px);
+  }
+
+  &-sign-up-button {
+    margin-bottom: remm(12px);
+    width: $rra-sign-up-page-sign-up-button-width;
+    justify-self: center;
+  }
+
+  &-sign-in-button {
+    margin-left: remm(6px);
+  }
+}

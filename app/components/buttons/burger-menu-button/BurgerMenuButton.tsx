@@ -1,6 +1,7 @@
 import './burger-menu-button.scss';
 import cn from 'classnames';
 import BurgerMenuIcon from '../../svg/BurgerMenuIcon';
+import { memo } from 'react';
 
 interface BurgerMenuButtonProps {
   className?: string;
@@ -8,12 +9,13 @@ interface BurgerMenuButtonProps {
 
 // TODO remove this component
 // and add IconButton component or extend TextButton features
-// to make a general reusable icon-button component 
+// to make a general reusable icon-button component
 // and don't copypaste a lot of code to make a new icon-button for a particular case
 
-export default function BurgerMenuButton(props: BurgerMenuButtonProps) {
+export function BurgerMenuButton(props: BurgerMenuButtonProps) {
   const { className } = { ...props };
   const classNames = cn('burger-menu-button', className);
+  // console.log('BurgerMenuButton rendered');
   return (
     <button className={classNames}>
       <span className="rra-hover-layout">
@@ -24,3 +26,10 @@ export default function BurgerMenuButton(props: BurgerMenuButtonProps) {
     </button>
   );
 }
+
+// BurgerMenuButton re-renders when ThmeSwitcher changed
+// to prevent unnecessary re-renders use function memo
+// function memo check if any props were changed in the current component
+// and re-renders it only if any props were changed
+// otherwise  skip rendering
+export default memo(BurgerMenuButton);

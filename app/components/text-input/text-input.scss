@@ -5,10 +5,13 @@
 @use '../../scss/functions.scss' as *;
 
 $input-font-size: remm(12px);
+$error-color-bg: rgba($red, .6);
+$error-color-border: rgba($red, .7);
 
 .rra-text-input {
   @include position(relative);
   display: flex;
+  flex-direction: column;
 
   &-field {
     @extend .rra-button-base;
@@ -56,5 +59,25 @@ $input-font-size: remm(12px);
     .rra-hover-layout {
       opacity: 0.5;
     }
+  }
+
+  &__error-message {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-self: flex-start;
+    padding: remm(4px) remm(12px);
+    font-size: remm(10px);
+    background-color: $error-color-bg;
+    color: $white;
+    margin-top: remm(4px);
+    border-radius: remm(16px);
+    text-shadow: -1px 1px 10px rgba($black, .9);
+    backdrop-filter: blur(3px);
+    border: 1px solid $error-color-border;
+    width: 100%;
+  }
+
+  &--error-state &-field:focus + &-label {
+    border-color: $error-color-border;
   }
 }
