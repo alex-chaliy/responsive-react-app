@@ -1,7 +1,8 @@
 @use '../../scss/helpers/glass-box.scss' as *;
 @use '../../scss/variables/colors.scss' as *;
+@use '../../scss/functions.scss' as *;
 
-$rra-glass-card-border-radius: 16px;
+$rra-glass-card-border-radius: remm(16px);
 
 .rra-glass-card {
   @include rra-glass-box($rra-glass-card-border-radius);

@@ -1,14 +1,16 @@
+@use '../../functions.scss' as *;
+
 // rra - app prefix - responsive react app
 .rra-page-base {
-  padding: 80px 22px 36px;
+  padding: remm(80px) remm(22px) remm(36px);
   width: 100%;
 
   .rra-main-heading {
-    margin-bottom: 16px;
+    margin-bottom: remm(16px);
   }
 
   .rra-glass-card {
-    min-width: 215px;
+    min-width: remm(215px);
   }
 }
 

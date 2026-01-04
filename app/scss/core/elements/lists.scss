@@ -1,5 +1,7 @@
+@use '../../functions.scss' as *;
+
 // Lists
-$list-gap-left: 16px;
+$list-gap-left: remm(16px);
 
 .rra-common-list {
   &-layer-first {
@@ -11,7 +13,7 @@ $list-gap-left: 16px;
     padding-left: $list-gap-left;
   }
   &-layer-third {
-    padding-left: $list-gap-left * 1.5;
+    padding-left: calc($list-gap-left * 1.5);
   }
 }
 

@@ -1,20 +1,21 @@
 @use '../../scss/core/page/page-base.scss' as *;
+@use '../../scss/functions.scss' as *;
 
 .rra-main-page {
   @extend .rra-page-base;
 
   &-heading {
-    margin-bottom: 16px;
+    margin-bottom: remm(16px);
   }
 
   &-sub-heading {
-    margin-bottom: 16px;
+    margin-bottom: remm(16px);
   }
 
   &-text {
     font-weight: 400;
-    font-size: 16px;
+    font-size: remm(16px);
     line-height: 150%;
-    letter-spacing: 0.15px;
+    letter-spacing: remm(0.15px);
   }
 }

@@ -1,11 +1,12 @@
 @use '../../../scss/variables/colors.scss' as *;
+@use '../../../scss/functions.scss' as *;
 
 .rra-main-heading {
   color: $blue;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 34px;
-  line-height: 124%;
-  letter-spacing: 0.25px;
+  font-size: remm(34px);
+  line-height: 125%;
+  letter-spacing: remm(0.25px);
   text-align: center;
 }

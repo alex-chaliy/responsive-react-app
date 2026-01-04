@@ -1,17 +1,19 @@
 @use '../variables/colors.scss' as *;
 @use '../variables/constants.scss' as *;
 
+@use '../functions.scss' as *;
+
 .rra-button-base {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 12px;
+  font-size: remm(12px);
 
   display: flex;
   justify-content: center;
   align-items: center;
   height: $button-height;
   border-radius: $button-height;
-  padding: 4px 12px;
+  padding: remm(4px) remm(12px);
   color: $black;
   background-color: transparent;
   border: none;

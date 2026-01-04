@@ -55,7 +55,7 @@ export default function SubHeading(props: SubHeadingProps) {
         rotation: '+=45',
         ease: 'power3.out',
         duration: 0.5,
-        display: 'inline-block' // if we use tag 'span' to wrap a single character, animation doesn't work
+        display: 'inline-block', // if we use tag 'span' to wrap a single character, animation doesn't work
         // to fix that we should apply 'display: inline-block' style to every single character
       });
     },
@@ -71,9 +71,9 @@ export default function SubHeading(props: SubHeadingProps) {
       <span
         className="rra-subheading__animations-container"
         ref={headingAnimationsContainer}
-      ></span>
-
-      <span className="rra-sub-heading__title-text">{title}</span>
+      >
+        <span className="rra-sub-heading__title-text">{title}</span>
+      </span>
     </h3>
   );
 }
