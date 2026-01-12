@@ -1,7 +1,7 @@
-@use '../../scss/helpers/button-base.scss' as *;
-@use '../../scss/helpers/button-glass-effect.scss' as *;
+@use '../../scss/utils/button-base.scss' as *;
+@use '../../scss/utils/button-glass-effect.scss' as *;
 @use '../../scss/variables/colors.scss' as *;
-@use '../../scss/core/mixins/position.scss' as *;
+@use '../../scss/mixins/position.scss' as *;
 @use '../../scss/functions.scss' as *;
 
 $input-font-size: remm(12px);

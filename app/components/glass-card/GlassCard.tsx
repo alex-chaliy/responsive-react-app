@@ -14,10 +14,10 @@ export default function GlassCard(props: GlassCardProps) {
   return (
     <div className={classNames}>
       {useDecoration && (
-        <img className="rra-glass-card-bg-decoration" alt="" src="/stripes-for-theme-light.png" />
+        <img className="rra-glass-card-bg-decoration" alt="" src="/bg/stripes-for-theme-light.png" />
       )}
       {useDecoration && (
-        <img className="rra-glass-card-bg-decoration-dark" alt="" src="/stripes-for-theme-dark.png" />
+        <img className="rra-glass-card-bg-decoration-dark" alt="" src="/bg/stripes-for-theme-dark.png" />
       )}
       <div className="rra-glass-card-children">{children}</div>
     </div>

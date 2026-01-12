@@ -1,19 +1,21 @@
 @use '../../scss/variables/colors.scss' as *;
-@use '../../scss/helpers/glass-box.scss' as *;
+@use '../../scss/utils/glass-box.scss' as *;
 
 @use '../../scss/functions.scss' as *;
 
 $header-height: remm(48px);
 
+// TODO add preffix rra
 .header-layout {
   display: flex;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   top: 0;
   left: 0;
   padding: remm(16px) remm(22px);
   width: 100%;
 
+  // TODO add preffix rra- and incapsulate childeren element classnames in rra-header
   .header {
     @include rra-glass-box($header-height, $header-height, 100%);
     background-color: $header-bg;
@@ -27,7 +29,6 @@ $header-height: remm(48px);
 
   .header-logo {
     margin-left: remm(15px);
-    margin-top: remm(5px);
   }
 
   .logo-wrap,

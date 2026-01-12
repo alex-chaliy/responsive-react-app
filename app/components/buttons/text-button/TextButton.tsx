@@ -37,6 +37,8 @@ interface TextButtonProps {
   placeOnBg?: TextButtonPlaceOnBGTypes;
 
   type?: TextButtonHtmlTypes; // works with mode 'button'
+
+  viewExtension?: 'default-view-extension' | 'super-feature-button';
 }
 
 export default function TextButton(props: TextButtonProps) {
@@ -50,6 +52,7 @@ export default function TextButton(props: TextButtonProps) {
     linkTarget,
     placeOnBg = DEFAULT_PLACE_ON_BG,
     type = DEFAULT_TEXT_BUTTON_HTML_TYPE,
+    viewExtension = 'default-view-extension'
   } = { ...props };
 
   const isLinkActive = usePathname() === linkHref;
@@ -62,7 +65,8 @@ export default function TextButton(props: TextButtonProps) {
     `rra-text-button-place-on-bg-${placeOnBg}`,
     {
       'rra-link-active': isLinkActive,
-    }
+    },
+    `rra-text-button-${viewExtension}`,
   );
 
   const animationsContainer = useRef<HTMLSpanElement>(null);
@@ -92,6 +96,7 @@ export default function TextButton(props: TextButtonProps) {
       revertOnUpdate: true,
     }
   );
+
   if (mode === 'link') {
     return (
       <>

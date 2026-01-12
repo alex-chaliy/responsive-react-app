@@ -9,13 +9,10 @@ export default function Home() {
 
   return (
     <>
-      <div className="rra-page-wrap">
-        <main className="page">
-          <Header />
-          <MainPage />
-        </main>
-      </div>
-
+      <main className="page">
+        <Header />
+        <MainPage />
+      </main>
     </>
   );
 }

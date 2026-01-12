@@ -1,11 +1,11 @@
-@use '../../../scss/helpers/button-base.scss' as *;
-@use '../../../scss/helpers/button-glass-effect.scss' as *;
+@use '../../../scss/utils/button-base.scss' as *;
+@use '../../../scss/utils/button-glass-effect.scss' as *;
 
 @use '../../../scss/variables/constants.scss' as *;
 @use '../../../scss/variables/colors.scss' as *;
 
 .burger-menu-button {
-  @extend .rra-button-base, .button-glass-effect;
+  @extend .button-glass-effect;
   width: $button-height;
   padding: 0;
 

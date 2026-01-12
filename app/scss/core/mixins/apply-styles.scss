@@ -1,6 +1,0 @@
-@mixin apply-styles($styles) {
-  @each $property, $value in $styles {
-    // Interpolation #{} is used to ensure the property name is correct
-    #{$property}: $value;
-  }
-}
