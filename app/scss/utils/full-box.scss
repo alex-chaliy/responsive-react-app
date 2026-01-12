@@ -1,0 +1,7 @@
+@use '../mixins/position.scss' as *;
+
+@mixin rra-full-box($height: 100%) {
+  @include position(absolute);
+  width: 100%;
+  height: $height;
+}

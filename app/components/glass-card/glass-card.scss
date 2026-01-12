@@ -1,4 +1,4 @@
-@use '../../scss/helpers/glass-box.scss' as *;
+@use '../../scss/utils/glass-box.scss' as *;
 @use '../../scss/variables/colors.scss' as *;
 @use '../../scss/functions.scss' as *;
 
@@ -39,6 +39,7 @@ $rra-glass-card-border-radius: remm(16px);
     opacity: .1;
     transition: opacity .9s;
     z-index: -1;
+    object-fit: cover;
   }
 
   &-bg-decoration-dark {

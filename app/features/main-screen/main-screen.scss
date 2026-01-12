@@ -1,0 +1,103 @@
+@use '../../scss/utils/page-base.scss' as *;
+@use '../../scss/mixins/position.scss' as *;
+
+@use '../../scss/utils/full-box.scss' as *;
+@use '../../scss/utils/darkener.scss' as *;
+
+@use '../../scss/variables/colors.scss' as *;
+@use '../../scss/functions.scss' as *;
+
+.rra-main-screen {
+  @extend .rra-page-screen-base;
+
+  overflow: hidden;
+
+  background: image-set(url('/bg/main-screen__bg-x2.jpg') 2x, url('/bg/main-screen__bg-x1.jpg') 1x) center top no-repeat;
+  background-size: cover;
+
+  &__icon-sprites {
+    @include rra-full-box;
+
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  &__icon-sprite {
+    @include rra-full-box(25%);
+
+    position: relative;
+    background: url('/sprites/logo-icons-sprite.png') 0 0 repeat-x;
+    background-size: auto 100%;
+    width: 300%;
+    top: -12.5%;
+
+    &-1 {
+      left: -170%;
+    }
+    &-2 {
+      left: -115%;
+    }
+    &-3 {
+      left: -1%;
+    }
+    &-4 {
+      left: -175%;
+    }
+    &-5 {
+      left: -15%;
+    }
+  }
+
+  &__darkener {
+    @include rra-darkener(0.8);
+    z-index: 1;
+  }
+
+  &__content {
+    @include position(relative);
+
+    z-index: 2;
+    color: $white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__logo-perspective {
+    display: flex;
+    justify-content: center;
+    width: remm(250px);
+    perspective: remm(100px);
+  }
+
+  &__headings {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $cyan;
+  }
+
+  & &__heading {
+    width: auto;
+    display: flex;
+    color: $cyan;
+    margin: 3.5rem 0 0;
+    text-shadow: -2px 2px 8px #000a;
+  }
+
+  & &__heading-1 {
+    position: relative;
+    left: 0;
+  }
+
+  & &__heading-2 {
+    margin: 0;
+    position: relative;
+    opacity: 0;
+  }
+}

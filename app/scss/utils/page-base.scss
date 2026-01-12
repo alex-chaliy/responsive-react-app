@@ -1,0 +1,37 @@
+@use '../functions.scss' as *;
+@use '../variables/constants.scss' as *;
+
+// rra - app prefix - responsive react app
+.rra-page-base {
+  padding: remm(80px) $page-side-padding remm(36px);
+  width: 100%;
+}
+
+.rra-page-base-centered {
+  @extend .rra-page-base;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rra-page-screen-base {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding: 0 $page-side-padding;
+}
+
+.rra-page-base,
+.rra-page-screen-base {
+  .rra-main-heading {
+    margin-top: remm(32px);
+    margin-bottom: remm(16px);
+  }
+
+  .rra-glass-card {
+    min-width: remm(215px);
+  }
+}

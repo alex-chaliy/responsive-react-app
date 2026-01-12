@@ -41,7 +41,7 @@ export default function RootLayout({
       >
         {children}
 
-        <LiquidGlassDistortion />
+        {/* <LiquidGlassDistortion /> */}
       </body>
     </html>
   );

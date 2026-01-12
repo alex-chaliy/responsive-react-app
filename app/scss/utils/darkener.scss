@@ -1,0 +1,6 @@
+@use './full-box.scss' as *;
+
+@mixin rra-darkener($opacity: 0.5) {
+  @include rra-full-box;
+  background-color: rgba(#000, $opacity);
+}

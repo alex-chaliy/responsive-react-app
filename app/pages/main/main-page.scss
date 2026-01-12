@@ -1,18 +1,13 @@
-@use '../../scss/core/page/page-base.scss' as *;
+@use '../../scss/utils/page-base.scss' as *;
 @use '../../scss/functions.scss' as *;
 
 .rra-main-page {
-  @extend .rra-page-base;
-
-  &-heading {
-    margin-bottom: remm(16px);
+  &__text-screen {
+    @extend .rra-page-screen-base;
+    height: auto;
   }
 
-  &-sub-heading {
-    margin-bottom: remm(16px);
-  }
-
-  &-text {
+  &__text {
     font-weight: 400;
     font-size: remm(16px);
     line-height: 150%;

@@ -4,29 +4,37 @@ import Link from 'next/link';
 
 interface LogoProps {
   className?: string;
-  width?: number;
-  height?: number;
+  width?: string;
+  height?: string;
   alt?: string;
+
+  mode?: 'default' | 'link';
 }
 
 export default function Logo(props: LogoProps) {
   const {
     className,
-    width = 26,
-    height = 19.25,
+    width = '26px',
+    height = 'auto',
     alt = 'App Logo',
+    mode = 'default',
   } = { ...props };
+
   const classNames = cn('rra-logo', className);
 
+  const styles = { width: width, height: height };
+
+  if (mode === 'link') {
+    return (
+      <Link href="/" className={classNames} style={styles}>
+        <img className="rra-logo__img" src="/svg/logo.svg" alt={alt} />
+      </Link>
+    );
+  }
+
   return (
-    <Link href="/" className="rra-logo-wrap">
-      <img
-        className={classNames}
-        src="/svg/logo.svg"
-        alt={alt}
-        width={width}
-        height={height}
-      />
-    </Link>
+    <span className={classNames} style={styles}>
+      <img className="rra-logo__img" src="/svg/logo.svg" alt={alt} />
+    </span>
   );
 }

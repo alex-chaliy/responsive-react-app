@@ -1,8 +1,21 @@
 @use '../../scss/animations/animations.scss' as *;
 
 .rra-logo {
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: default;
   position: relative;
   animation: rra-bounce .6s ease-out;
   height: auto;
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &[href] {
+    cursor: pointer;
+  }
 }

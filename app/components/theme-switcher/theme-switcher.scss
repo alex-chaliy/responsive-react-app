@@ -1,6 +1,6 @@
-@use '../../scss/helpers/pseudo-el-base.scss' as *;
-@use '../../scss/helpers/button-base.scss' as *;
-@use '../../scss/helpers/button-pressed-glass-effect.scss' as *;
+@use '../../scss/utils/pseudo-el-base.scss' as *;
+@use '../../scss/utils/button-base.scss' as *;
+@use '../../scss/utils/button-pressed-glass-effect.scss' as *;
 
 @use '../../scss/variables/constants.scss' as *;
 @use '../../scss/functions.scss' as *;
@@ -12,7 +12,7 @@ $sunny-moon-el-width: remm(20px);
 $sunny-moon-el-margin: remm(2px);
 
 .theme-switcher {
-  @extend .rra-button-base, .button-pressed-glass-effect;
+  @extend .button-pressed-glass-effect;
   width: $switch-width;
   min-width: $switch-width;
   height: $switch-height;

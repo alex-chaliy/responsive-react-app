@@ -1,0 +1,22 @@
+@use '../functions.scss' as *;
+
+.rra-mb-10 { margin-bottom: remm(10px); }
+.rra-mb-16 { margin-bottom: remm(16px); }
+.rra-mb-25 { margin-bottom: remm(25px); }
+.rra-mb-50 { margin-bottom: remm(50px); }
+
+.rra-mt-10 { margin-top: remm(10px); }
+.rra-mt-16 { margin-top: remm(16px); }
+.rra-mt-25 { margin-top: remm(25px); }
+.rra-mt-50 { margin-top: remm(50px); }
+
+
+.rra-pb-10 { padding-bottom: remm(10px); }
+.rra-pb-16 { padding-bottom: remm(16px); }
+.rra-pb-25 { padding-bottom: remm(25px); }
+.rra-pb-50 { padding-bottom: remm(50px); }
+
+.rra-pt-10 { padding-top: remm(10px); }
+.rra-pt-16 { padding-top: remm(16px); }
+.rra-pt-25 { padding-top: remm(25px); }
+.rra-pt-50 { padding-top: remm(50px); }
